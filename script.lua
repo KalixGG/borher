@@ -170,14 +170,14 @@ Close.MouseButton1Click:Connect(function()
 end)
 
 Player1Button.MouseButton1Down:connect(function()
-for i = 0,1 do
+for i = 1000,10000 do
    game.Workspace.Votes:FireServer(false,"p1")
    game:GetService("RunService").Heartbeat:Wait()
 end
 end)
  
 Player2Button.MouseButton1Down:connect(function()
-for i = 0,1 do
+for i = 1000,10000 do
    game.Workspace.Votes:FireServer(false,"p2")
    game:GetService("RunService").Heartbeat:Wait()
 end
@@ -186,5 +186,5 @@ end)
 while true do
 Player2Button.Text = game.Workspace.RapBattles.Rappers.player2.Value
 Player1Button.Text = game.Workspace.RapBattles.Rappers.player1.Value
-wait(0.1)
+wait(0.01)
 end
