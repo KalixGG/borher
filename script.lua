@@ -40,7 +40,7 @@ ExploitGUI.Name = "ExploitGUI"
 ExploitGUI.Parent = ScreenGui
 ExploitGUI.BackgroundColor3 = Color3.new(0, 0, 0)
 ExploitGUI.BackgroundTransparency = 0.5
-ExploitGUI.Position = UDim2.new(0.3, 0, 0.5, 0)
+ExploitGUI.Position = UDim2.new(0.3, 0, 0.1, 0)
 ExploitGUI.Size = UDim2.new(0, 300, 0, 300)
 ExploitGUI.BorderSizePixel = 5
 ExploitGUI.Visible = true
@@ -170,14 +170,14 @@ Close.MouseButton1Click:Connect(function()
 end)
 
 Player1Button.MouseButton1Down:connect(function()
-for i = 1000,10000 do
+for i = 0,100 do
    game.Workspace.Votes:FireServer(false,"p1")
    game:GetService("RunService").Heartbeat:Wait()
 end
 end)
  
 Player2Button.MouseButton1Down:connect(function()
-for i = 1000,10000 do
+for i = 0,100 do
    game.Workspace.Votes:FireServer(false,"p2")
    game:GetService("RunService").Heartbeat:Wait()
 end
@@ -186,5 +186,5 @@ end)
 while true do
 Player2Button.Text = game.Workspace.RapBattles.Rappers.player2.Value
 Player1Button.Text = game.Workspace.RapBattles.Rappers.player1.Value
-wait(0.01)
+wait(0.1)
 end
